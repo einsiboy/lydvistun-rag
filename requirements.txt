@@ -1,0 +1,2 @@
+together==1.2.11
+python-dotenv==1.0.1
