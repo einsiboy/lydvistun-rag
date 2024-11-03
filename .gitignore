@@ -41,3 +41,15 @@ dmypy.json
 # Local environment variables
 .env
 # End Generation Here
+
+
+# 
+data/mysql/*
+data/wikipedia/
+
+
+# ignore all .parquet files
+*.parquet
+data/visindavefur_articles.json
+data/wikipedia_meta/test/pageviews-202309-user.bz2
+data/wikipedia_meta/test/test_data.txt

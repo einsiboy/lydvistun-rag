@@ -1,0 +1,35 @@
+version: '3.8'
+
+services:
+  db:
+    image: mariadb:10.6
+    # platform: linux/amd64  # Specify the platform
+    platform: linux/arm64
+    container_name: wikipedia_db
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_USER: wikiuser
+      MYSQL_PASSWORD: wikipassword
+    volumes:
+      - ./data/mysql:/var/lib/mysql
+      - ./init:/docker-entrypoint-initdb.d
+      - ./docker_conf/my.cnf:/etc/mysql/conf.d/my.cnf
+    ports:
+      - "3306:3306"
+
+  # phpmyadmin:
+  #   image: phpmyadmin/phpmyadmin
+  #   # platform: linux/amd64  # Specify the platform
+  #   platform: linux/arm64
+  #   container_name: phpmyadmin
+  #   environment:
+  #     PMA_HOST: db
+  #     PMA_USER: root
+  #     PMA_PASSWORD: rootpassword
+  #   ports:
+  #     - "8080:80"
+  #   depends_on:
+  #     - db
+
+volumes:
+  mysql:

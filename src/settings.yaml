@@ -1,0 +1,17 @@
+pinecone:
+  cloud: "aws"
+  region: "us-east-1"
+  indices:
+    english:
+      dimension: 1536  
+      embedding_model: "M2-BERT-80M-8K-Retrieval"
+      is_local: false
+      index_name: "en-index"
+    icelandic:
+      dimension: 1024  
+      embedding_model: "intfloat/multilingual-e5-large-instruct"
+      is_local: true
+      index_name: "is-index"
+
+together_ai:
+  model: "meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo"
