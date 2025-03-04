@@ -9,9 +9,6 @@ import wikitextparser as wtp
 DATA_DIR = "/Users/einar/git/hafsteinn/together_rag/data"
 
 # Paths to your dump and index files
-# DUMP_FILE = f"{DATA_DIR}/wikipedia/no/nowiki-20241001-pages-articles-multistream.xml.bz2"
-# INDEX_FILE = f"{DATA_DIR}/wikipedia/no/nowiki-20241001-pages-articles-multistream-index.txt.bz2"
-
 DUMP_FILE = f"{DATA_DIR}/wikipedia/en/enwiki-20241001-pages-articles-multistream.xml.bz2"
 INDEX_FILE = f"{DATA_DIR}/wikipedia/en/enwiki-20241001-pages-articles-multistream-index.txt.bz2"
 

@@ -91,8 +91,8 @@ def _combine_short_chunks(chunks: List[str], min_words_per_chunk: int) -> List[s
 
 def split_text(
     text: str,
-    chunk_size: int = 2000,
-    chunk_overlap: int = 100,
+    chunk_size: int,
+    chunk_overlap: int,
     discard_chunk_n_words_cutoff: Optional[int] = None,
     clean_whitespace: bool = True,
     clean_html: bool = True,
